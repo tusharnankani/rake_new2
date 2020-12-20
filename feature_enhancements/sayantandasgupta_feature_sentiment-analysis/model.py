@@ -9,7 +9,7 @@ def text_preprocess(text):
     text = str(text)
     text = text.lower()
 
-    stop_words = stopwords.words('english')
+    stop_words = stopwords.words("english")
 
     # clean the text
 
@@ -34,11 +34,11 @@ def file_preprocess():
     sent_list = file1.readlines()
     sent_list = [re.sub(r"\n", " ", x) for x in sent_list]
 
-    #text = ""
+    # text = ""
     # for x in sent_list:
     #   text = text + x
 
-    #sentences = sent_tokenize(text)
+    # sentences = sent_tokenize(text)
 
     word_vec = [text_preprocess(sent) for sent in sent_list]
     word_vec = [sent for sent in word_vec if len(sent) > 0]
