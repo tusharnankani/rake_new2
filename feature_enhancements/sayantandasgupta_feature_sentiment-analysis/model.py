@@ -3,7 +3,8 @@ from re import sub
 
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
 
 
 def text_preprocess(text):
